@@ -12,6 +12,7 @@ public class Heal extends Main {
 	if(cmd.getName().equalsIgnoreCase("Heal")){
 			if(sender.hasPermission("eServerCommands.Heal")){
 				player.setHealth(20);
+				player.setFoodLevel(20);
 				player.sendMessage(ChatColor.GREEN + "You have been healed!");
 			} else {
 				player.sendMessage(ChatColor.RED + "You do not have access to that command");

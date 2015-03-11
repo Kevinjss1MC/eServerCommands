@@ -1,0 +1,17 @@
+name: eServerCommands
+version: 0.00.001A
+main: org.kevinjss1.bukkit.eServerCommands.main.Main
+author: kevinjss1
+description: A assortment of basic server commmands for your players and admins.
+ 
+commands:
+    heal:
+        usage: /<command>
+        aliases: [h, givehealth]
+        description: Heal.
+    op:
+        usage: /<command> <Player>
+        description: Op a player.
+    deop:
+        usage: /<command> <Player>
+        description: Deop a player.
