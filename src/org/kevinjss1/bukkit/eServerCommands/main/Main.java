@@ -18,7 +18,7 @@ public class Main extends JavaPlugin {
 		
 		if(cmd.getName().equalsIgnoreCase("op")){
 			Player target = Bukkit.getServer().getPlayer(args[0]);
-			if(sender.hasPermission("eServerCommands.op")){
+			if(sender.hasPermission("eServerCommands.op.give") || sender.hasPermission("eServerCommands.op.*")){
 				if(!(args.length == 1)){
 					sender.sendMessage(ChatColor.GOLD + "Usage /OP <Player>");
 					return true;
@@ -35,7 +35,7 @@ public class Main extends JavaPlugin {
 		}
 		if(cmd.getName().equalsIgnoreCase("deop")){
 			Player target = Bukkit.getServer().getPlayer(args[0]);
-			if(sender.hasPermission("eServerCommands.op")){
+			if(sender.hasPermission("eServerCommands.op.take") || sender.hasPermission("eServerCommands.op.*")){
 				if(!(args.length == 1)){
 					sender.sendMessage(ChatColor.GOLD + "Usage /DEOP <Player>");
 					return true;
