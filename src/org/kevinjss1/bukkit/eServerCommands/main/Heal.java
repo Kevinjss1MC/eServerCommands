@@ -17,11 +17,12 @@ public class Heal extends Main implements CommandExecutor{
 				player.sendMessage(ChatColor.GREEN + "You have been healed!");
 			} else {
 				player.sendMessage(ChatColor.RED + "You do not have access to that command");
+				return true;
 			}
 			
 			
 		}
-		return false;
+		return true;
 	}
 	
 

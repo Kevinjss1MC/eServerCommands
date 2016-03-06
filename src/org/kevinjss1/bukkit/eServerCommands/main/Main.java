@@ -1,3 +1,4 @@
+//ALPHA (RELEASE) version 0.00.0002A (9.1BASE)
 package org.kevinjss1.bukkit.eServerCommands.main;
 
 import org.bukkit.Bukkit;
@@ -9,13 +10,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 	
-	
 	@Override
 	public void onEnable(){
-		getLogger().info(ChatColor.RED + "[eServerCommands]" + ChatColor.RESET + "Has sucessfuly been enabled");
+		
+		this.getCommand("Heal").setExecutor(new Healcmd());
+		this.getCommand("eVersion").setExecutor(new eVersion());
 	}
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		
+//		if(cmd.getName().equalsIgnoreCase("eVersion")){
+//			Player player = (Player) sender;
+//			player.sendMessage(ChatColor.BLUE + "This is alpha(INDEV) version 0.00.001A v8.1");
+//			return true;
+//		}
 		if(cmd.getName().equalsIgnoreCase("op")){
 			Player target = Bukkit.getServer().getPlayer(args[0]);
 			if(sender.hasPermission("eServerCommands.op.give") || sender.hasPermission("eServerCommands.op.*")){

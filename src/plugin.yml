@@ -1,8 +1,8 @@
 name: eServerCommands
-version: 0.00.001A
+version: 0.00.002A
 main: org.kevinjss1.bukkit.eServerCommands.main.Main
 author: kevinjss1
-description: A assortment of basic server commmands for your players and admins.
+description: A assortment of basic server commands for your players and admins.
  
 commands:
     heal:
@@ -12,3 +12,6 @@ commands:
         description: Op a player.
     deop:
         description: Deop a player.
+    eversion:
+        aliases: [ev, ever]
+        description: View version information.
